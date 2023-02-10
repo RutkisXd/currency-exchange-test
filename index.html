@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="currency-converter-wrapper">
+        <div class="text-wrapper">
+            <h4 class="main-header">Currency Converter</h4>
+        </div>
+        <form id="form">
+            <div class="amount">
+                <p class="main-description">Type desired amount</p>
+                <input type="text" id="amount-input">
+            </div>
+
+    
+            <div class="from-to">
+                <div class="main-currency">
+                    <label for="has-currency">From:</label>
+                    <select name="currency" id="has-this-currency"></select>
+                </div>
+        
+                <input type="image" src="https://th.bing.com/th/id/R.c591edd0f22db9ea6d85f09e8ba29420?rik=4a7f9p%2fdm88nhA&riu=http%3a%2f%2fcdn.onlinewebfonts.com%2fsvg%2fimg_259442.png&ehk=6lDfIZ13HhFdKc%2bk15k%2fs9g50DYKbIC156y0aAxRRYQ%3d&risl=&pid=ImgRaw&r=0" 
+                id="switch-button" alt="Switch" width="24" height="24">
+        
+                <div class="desired-currency">
+                    <label for="wants-currency">To:</label>
+                    <select name="currency" id="wants-this-currency"></select>
+                </div>
+            </div>
+
+            <input type="button" id="submit-button" value="Submit">
+        </form>
+        
+        <div class="output-wrapper"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

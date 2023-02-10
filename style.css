@@ -1,0 +1,64 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: powderblue;
+    font-family: "Poppins", sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 30px 20px;
+}
+
+#form {
+    margin: 40px 0 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.from-to {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.currency-converter-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: white;
+    flex-wrap: wrap;
+    border-radius: 25px;
+    padding: 30px;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-currency, .desired-currency {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+
+#switch-button {
+    height: auto;
+}
+
+#submit-button{
+    margin-top: 20px;
+    color: #FFFFFF;
+    height: 40px;
+    width: 50%;
+    border-radius: 5px;
+    font-size: 17px;
+    cursor: pointer;
+    background-color: powderblue;
+    transition: 0.3s ease;
+}
