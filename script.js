@@ -19,6 +19,10 @@ function getCurrencies() {
         currencyOptionElement.textContent = `${key} - ${currencies[key]}`;
         currencyOptionElement.value = key;
         hasCurrencySelectElement.append(currencyOptionElement);
+
+        if (key === "USD") {
+          currencyOptionElement.selected = true;
+        }
       }
     
       const wantsCurrencySelectElement = document.querySelector('#wants-this-currency');
@@ -28,6 +32,11 @@ function getCurrencies() {
         currencyOptionElement.textContent = `${key} - ${currencies[key]}`;
         currencyOptionElement.value = key;
         wantsCurrencySelectElement.append(currencyOptionElement);
+
+        
+        if (key === "EUR") {
+          currencyOptionElement.selected = true;
+        }
       }
 
       submitButton.removeAttribute('disabled');
