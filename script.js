@@ -1,6 +1,7 @@
 const submitButton = document.querySelector('#submit-button');
-const outputElement = document.querySelector('.output-item');
 const switchButton = document.querySelector('#switch-button')
+
+const outputList = document.querySelector('.output-wrapper')
 
 const apiKey = '3ac66f237ea5d897a0daddd0d1a1f84fb85f691c';
 
@@ -49,6 +50,8 @@ function convertCurrency() {
       fetch(apiUrl)
       .then(response => response.json())
       .then(data => {
+          const outputElement = document.createElement('div');
+          outputElement.className = 'output-item'
           const rateForAmount = data.rates[wantsCurrency].rate_for_amount;
           const rate = data.rates[wantsCurrency].rate
           // const currencyName = data.rated[wantsCurrency].currency_name
@@ -61,6 +64,7 @@ function convertCurrency() {
           rateText.textContent = `Rate for the currency: ${rate}`
 
           outputElement.append(resultText, rateText)
+          outputList.append(outputElement)
       });
   });
 }
