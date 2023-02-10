@@ -76,3 +76,7 @@ body {
     display: flex;
     flex-direction: column;
 }
+
+#amount-input, .amount{
+    width: 100%;
+}
