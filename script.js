@@ -37,7 +37,7 @@ function convertCurrency() {
   submitButton.addEventListener('click', event => {
       event.preventDefault();
 
-      const previousResult = document.querySelector('p')
+      const previousResult = document.querySelector('span')
 
       if (previousResult) {
         previousResult.remove()
@@ -59,7 +59,7 @@ function convertCurrency() {
           const rate = data.rates[wantsCurrency].rate
           // const currencyName = data.rated[wantsCurrency].currency_name
 
-          const resultText = document.createElement('p')
+          const resultText = document.createElement('span')
           resultText.textContent = `${hasCurrency} coverted to ${wantsCurrency} is : ${rateForAmount}. Rate for the currency: ${rate}`
           resultText.value = rateForAmount.value
 
