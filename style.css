@@ -40,6 +40,7 @@ body {
     padding: 30px;
     justify-content: center;
     align-items: center;
+    height: 80%;
 }
 
 .main-currency, .desired-currency {
@@ -63,4 +64,15 @@ body {
     cursor: pointer;
     background-color: powderblue;
     transition: 0.3s ease;
+}
+
+.output-wrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.output-item{
+    display: flex;
+    flex-direction: column;
 }

@@ -1,5 +1,5 @@
 const submitButton = document.querySelector('#submit-button');
-const outputElement = document.querySelector('.output-wrapper');
+const outputElement = document.querySelector('.output-item');
 const switchButton = document.querySelector('#switch-button')
 
 const apiKey = '3ac66f237ea5d897a0daddd0d1a1f84fb85f691c';
@@ -36,12 +36,6 @@ function getCurrencies() {
 function convertCurrency() {
   submitButton.addEventListener('click', event => {
       event.preventDefault();
-
-      const previousResult = document.querySelectorAll('span');
-
-      for (let i = 0; i < previousResult.length; i++) {
-        previousResult[i].remove();
-      }
 
       const amountInput = document.querySelector('#amount-input');
       const hasCurrencySelectElement = document.querySelector('#has-this-currency');
