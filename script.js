@@ -37,10 +37,10 @@ function convertCurrency() {
   submitButton.addEventListener('click', event => {
       event.preventDefault();
 
-      const previousResult = document.querySelector('span')
+      const previousResult = document.querySelectorAll('span');
 
-      if (previousResult) {
-        previousResult.remove()
+      for (let i = 0; i < previousResult.length; i++) {
+        previousResult[i].remove();
       }
 
       const amountInput = document.querySelector('#amount-input');
@@ -60,10 +60,13 @@ function convertCurrency() {
           // const currencyName = data.rated[wantsCurrency].currency_name
 
           const resultText = document.createElement('span')
-          resultText.textContent = `${hasCurrency} coverted to ${wantsCurrency} is : ${rateForAmount}. Rate for the currency: ${rate}`
+          resultText.textContent = `${hasCurrency} coverted to ${wantsCurrency} is : ${rateForAmount}.`
           resultText.value = rateForAmount.value
 
-          outputElement.append(resultText)
+          const rateText = document.createElement('span')
+          rateText.textContent = `Rate for the currency: ${rate}`
+
+          outputElement.append(resultText, rateText)
       });
   });
 }
