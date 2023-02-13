@@ -64,6 +64,7 @@ body {
     cursor: pointer;
     background-color: powderblue;
     transition: 0.3s ease;
+    border: 1px solid powderblue;
 }
 
 .output-wrapper{
@@ -79,4 +80,22 @@ body {
 
 #amount-input, .amount{
     width: 100%;
+}
+
+#amount-input {
+    height: 30px;
+    font-size: 15px;
+    padding: 0 15px;
+    border: 1px solid #6a51f4;
+}
+
+#amount-input:hover {
+    border: 1px solid #2500f8;
+}
+
+#has-this-currency , #wants-this-currency {
+    height: 30px;
+    font-size: 15px;
+    padding: 0 15px;
+    border: 1px solid #6a51f4;
 }
